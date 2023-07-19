@@ -58,7 +58,6 @@ class A implements D{
         System.out.println("invoke A.testd1");
     }
 
-
 }
 
 class B extends A {
