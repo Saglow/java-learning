@@ -104,6 +104,9 @@ class B extends A {
         private B_1 b1;
     }
 
+
+
+    // 11111
 }
 
 interface D {
