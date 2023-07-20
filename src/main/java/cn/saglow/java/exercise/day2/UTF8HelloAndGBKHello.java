@@ -7,7 +7,7 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Description: Utf8保存你好
+ * Description: Utf8和GBK保存你好
  * Author: HW
  * Date: 2023/7/20
  */
@@ -45,9 +45,7 @@ public class UTF8HelloAndGBKHello {
         try {
             OutputStream outputStream = new FileOutputStream(filePathG);
             // 此时，outputStream 就是用来写入文件的流
-            String contentToWrite="你好";
-            byte[] contentInGBK = contentToWrite.getBytes("GBK");
-            outputStream.write(contentInGBK);
+            outputStream.write("你好".getBytes("GBK"));
             outputStream.close(); // 关闭流
         } catch (IOException e) {
             e.printStackTrace();
