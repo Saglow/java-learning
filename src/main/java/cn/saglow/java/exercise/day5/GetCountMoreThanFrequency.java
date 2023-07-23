@@ -2,7 +2,6 @@ package cn.saglow.java.exercise.day5;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Description: 获得出现次数大于Frequency的字符串
@@ -10,7 +9,7 @@ import java.util.stream.Stream;
  * Date: 2023/7/23
  */
 public class GetCountMoreThanFrequency {
-    public static List<String> getCountMoreThenMaxNumber(List<Set<String>> content, Integer maxNumber) {
+    public static List<String> getCountMoreThanFrequency(List<Set<String>> content, Integer frequency) {
         return content.stream()
                 .flatMap(Set::stream)
                 .toList()
@@ -18,7 +17,7 @@ public class GetCountMoreThanFrequency {
                 .collect(Collectors.groupingBy(i -> i, Collectors.counting()))
                 .entrySet()
                 .stream()
-                .filter(i->i.getValue()>maxNumber)
+                .filter(i->i.getValue()>frequency)
                 .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue))
                 .keySet()
                 .stream()
@@ -40,6 +39,6 @@ public class GetCountMoreThanFrequency {
         list.add(set4);
         list.add(set5);
         System.out.println(list);
-        System.out.println(getCountMoreThenMaxNumber(list,3));
+        System.out.println(getCountMoreThanFrequency(list,3));
     }
 }
