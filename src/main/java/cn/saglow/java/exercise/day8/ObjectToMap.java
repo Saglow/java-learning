@@ -25,11 +25,6 @@ public class ObjectToMap {
 
         for (Field iterator : field) {
 
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //设置访问private字段的权限
-            iterator.setAccessible(true);
-            //设置访问private字段的权限
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             String str = iterator.getName();
             Object obj = iterator.get(a);
