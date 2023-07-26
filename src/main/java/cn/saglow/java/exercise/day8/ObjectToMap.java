@@ -41,10 +41,13 @@ public class ObjectToMap {
     @Data
     @AllArgsConstructor
     public static class humanBeings{
+        humanBeings(){
+
+        }
         private BigDecimal height;
         public BigDecimal weight;
-        private BigDecimal age;
-        private String name;
+        public BigDecimal age;
+        public String name;
     }
 
     public static void main(String[] args) throws IllegalAccessException {
