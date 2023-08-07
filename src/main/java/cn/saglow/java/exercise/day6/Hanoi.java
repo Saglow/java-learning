@@ -7,7 +7,7 @@ package cn.saglow.java.exercise.day6;
  */
 public class Hanoi {
     public static void printHanoiStep(String source, String target, String temp, Integer depth) {
-        if(depth==1){
+        if(depth == 1){
             System.out.println("Move 1 from "+source+" to "+target);
             return;
             //一开始写了个无限递归，值得反思
@@ -21,7 +21,7 @@ public class Hanoi {
         String source = "A";
         String temp = "B";
         String target = "C";
-        int depth = 3;
+        int depth = 2;
         printHanoiStep(source, target, temp, depth);
     }
 }

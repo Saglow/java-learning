@@ -12,16 +12,16 @@ public class GetCountMoreThanFrequency {
     public static List<String> getCountMoreThanFrequency(List<Set<String>> content, Integer frequency) {
         return content.stream()
                 .flatMap(Set::stream)
-                .toList()
-                .stream()
+//                .toList()
+//                .stream()
                 .collect(Collectors.groupingBy(i -> i, Collectors.counting()))
                 .entrySet()
                 .stream()
-                .filter(i->i.getValue()>frequency)
-                .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue))
-                .keySet()
-                .stream()
-                .toList();
+                    .filter(i->i.getValue()>frequency)
+                    .collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue))
+                    .keySet()
+                    .stream()
+                    .toList();
     }
 
     public static void main(String[] args) {

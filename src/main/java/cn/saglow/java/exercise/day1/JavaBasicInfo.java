@@ -184,6 +184,7 @@ class Type_3<T> {
     public void setProperty(T property) {
         this.property = property;
     }
+
 }
 
 class Type_4<T,T2> {

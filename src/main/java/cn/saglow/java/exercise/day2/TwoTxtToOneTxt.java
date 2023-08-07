@@ -11,6 +11,7 @@ public class TwoTxtToOneTxt {
         String inputFilePath1 = "d:/workspace/temp/1.txt";
         String inputFilePath2 = "d:/workspace/temp/2.txt";
         String outputFilePath = "d:/workspace/temp/3.txt";
+        // todo
         try (InputStream inputStream1 = new FileInputStream(inputFilePath1);
              InputStream inputStream2 = new FileInputStream(inputFilePath2);
              OutputStream outputStream = new FileOutputStream(outputFilePath)) {
