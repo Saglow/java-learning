@@ -9,6 +9,7 @@ import xyz.saglow.exercise.spring.bean.Address;
 import xyz.saglow.exercise.spring.bean.Person;
 import xyz.saglow.exercise.spring.controller.DepthStorage;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -39,19 +40,38 @@ public class TestController {
                 .age(new Random().nextInt(100))
                 .address("shanghai")
                 .build();
-
+//        {
+//            MyMethodTree<String,Long,Long> currentNode = TreeStorage.getTree();
+//            if (currentNode.isRoot()) {
+//                currentNode.setValue("%s");
+//                currentNode.setStartTime(System.currentTimeMillis());
+//                TreeStorage.setTree(currentNode);
+//            } else {
+//                MyMethodTree<String,Long,Long> newNode = new MyMethodTree<>("%s",System.currentTimeMillis());
+//                currentNode.addChild(newNode);
+//                TreeStorage.setTree(newNode);
+//            }
+//        }
         p.print();
+//        {
+//            MyMethodTree<String,Long,Long> currentNode = TreeStorage.getTree();
+//            currentNode.setEndTime(System.currentTimeMillis());
+//            if (currentNode.isRoot()) {
+//                List<MyMethodTree<String,Long,Long>> list = new ArrayList<>();
+//                list.add(currentNode);
+//                MyMethodTree.print(list);
+//            } else {
+//                TreeStorage.setTree(currentNode.getParent());
+//            }
+//        }
 
-//        p.print2(param.getName());
-//
-//        //
 //        new Thread(() -> {
 //            Address a = new Address("上海2","上海2","浦东新区2");
 //            a.print();
 //            // todo 如何获取父线程所有的threadlocal，给到子线程
 //        }).start();
 //        Thread.sleep(10);
-        TestDataStorage.remove();
+//        TestDataStorage.remove();
         return p;
     }
 }
